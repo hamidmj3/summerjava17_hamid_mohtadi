@@ -18,8 +18,8 @@ public class School {
 	private  ArrayList<String> courseNames;
 
 
-public School(String newname){
-	name=newname;
+public School(String new_name){
+	name=new_name;
 	houseNames = new ArrayList<String>();
 	
 	studentNames=new Vector<String>();
@@ -31,55 +31,84 @@ public School(String newname){
 	housed=false;
 	
 	}
-String get_name(){
+public School(String new_name,int new_numOfStudents,boolean new_housed,ArrayList<String> new_houseNames, 
+		Vector<String>  new_studentNames,Vector<String> new_professorNames,ArrayList<String> new_courseNames){
+	name=new_name;
+	
+	numOfStudents=new_numOfStudents;
+	
+	housed=new_housed;
+	
+	houseNames=new_houseNames;
+	
+	studentNames=new_studentNames;
+	
+	professorNames=new_professorNames;
+	
+	courseNames=new_courseNames;
+}
+	public String get_name(){
 	return name;
 	}
 
-void set_name(String newname){
+	public void set_name(String newname){
 	name = newname;
 	
 	}
 
-	int get_numOfStudents(){
+public	int get_numOfStudents(){
 		return numOfStudents;
 	}
 	
-	void set_numOfStudents(int new_numOfStudents){
+public	void set_numOfStudents(int new_numOfStudents){
 		numOfStudents = new_numOfStudents;
 		
 		}
-	boolean get_housed(){
+	public	boolean get_housed(){
 		return housed;
 		}
-	void set_housed(boolean newStatOf_housed){
+	public	void set_housed(boolean newStatOf_housed){
 		housed = newStatOf_housed;
 		
 	}
 	
-	ArrayList<String> get_houseNames(){
+public ArrayList<String> get_houseNames(){
 		return houseNames;
 		}
-	void set_houseNames(ArrayList<String> new_houseNames){
+public void set_houseNames(ArrayList<String> new_houseNames){
 		houseNames = new_houseNames;
 	}
-	Vector<String> get_studentNames(){
+	public Vector<String> get_studentNames(){
 		return studentNames;
 	}
-	void set_studentNames(Vector<String> new_studentNames){
+	public void set_studentNames(Vector<String> new_studentNames){
 		studentNames=new_studentNames;
 		
 	}
-	Vector<String> get_professorNames(){
+public	Vector<String> get_professorNames(){
 		return professorNames;
 	}
-	void set_professorNames(Vector<String> new_professorNames){
+public	void set_professorNames(Vector<String> new_professorNames){
 		professorNames=new_professorNames;
 	}
-	ArrayList<String> get_courseNames(){
+	public	ArrayList<String> get_courseNames(){
 		return courseNames;
 	}
-	void set_courseNames(ArrayList<String> new_courseNames){
+	public	void set_courseNames(ArrayList<String> new_courseNames){
 		courseNames=new_courseNames;
+	}
+public void Add_houseNames(String houseName ){
+	houseNames.add(houseName);
+	}
+public void Add_studentNames(String studentName){
+	studentNames.add(studentName);
+	numOfStudents=numOfStudents+1;
+	}
+	public void Add_professorNames(String professorName){
+	professorNames.add(professorName);
+	}
+	public void Add_courseNames(String courseName){
+	courseNames.add(courseName);
 	}
 }
 
